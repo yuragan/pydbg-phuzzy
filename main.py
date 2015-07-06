@@ -13,11 +13,8 @@ class cdbfuzz:
 			print "[+] Please check all given paths"
 			exit()
 		programname = app
-		print "[+] Target application path =>",programname
 		crashdir = crashd
-		print "[+] Crash Dir => ",crashdir
 		cdblocation = debugger
-		print "[+] Debugger path => ",cdblocation
 	def startapp(self,input_file):
 		cmd = cdblocation+' '+'-c ".logopen '+crashdir+'temp.log;g;.logclose '+crashdir+'temp.log" '+programname+' '+input_file
 		process = subprocess.Popen(cmd)
