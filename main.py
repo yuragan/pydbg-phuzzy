@@ -30,4 +30,4 @@ class cdbfuzz:
 			return True
 	def dumpcrash(self,crash_filename):
 		prog = programname.split('\\')[-1:][0]
-		shutil.copyfile(crash_filename, crashdir+prog+'_'+datetime.now().strftime("%y-%m-%d-%H-%M")+'_Crash'+".m3u")
+		shutil.copyfile(crash_filename, crashdir+prog+'_'+datetime.now().strftime("%y-%m-%d-%H-%M")+'_dump'+".html")
